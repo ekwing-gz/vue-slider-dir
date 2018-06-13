@@ -1,6 +1,6 @@
 <template>
-  <div id="app" v-slide="{tabNum, urls}">
-    <tab :links="links" :tabNum="tabNum"></tab>
+  <div id="app" v-slide:tabNum="{urls}">
+    <tab :links="links" v-model="tabNum"></tab>
     <router-view></router-view>
   </div>
 </template>

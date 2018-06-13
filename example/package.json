@@ -12,7 +12,7 @@
   "dependencies": {
     "vue": "^2.5.11",
     "vue-router": "^3.0.1",
-    "vue-slider-dir": "^1.0.0"
+    "vue-slider-dir": "^1.0.3"
   },
   "browserslist": [
     "> 1%",

@@ -1,7 +1,9 @@
 <template>
   <div class="tab">
     <router-link v-for="(item, index) in links"
-      :to="item.url" :key="item.url"
+      :to="item.url"
+      :key="item.url"
+      @click.native="handleClick(index)"
       :style="{width: 100/links.length + '%'}">{{ item.name }}</router-link>
     <div class="slider" :style="{width: width + '%'}"></div>
   </div>
@@ -15,8 +17,14 @@ export default {
       width,
     }
   },
+  methods: {
+    handleClick (index) {
+      this.$emit('input', index)
+    }
+  },
   props: {
     links: Array,
+    value: Number
   },
 }
 </script>
